@@ -1,0 +1,33 @@
+{
+  "name": "conuco-strapi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.10",
+    "@strapi/plugin-graphql": "^4.15.0",
+    "@strapi/plugin-i18n": "4.15.0",
+    "@strapi/plugin-users-permissions": "4.15.0",
+    "@strapi/strapi": "4.15.0",
+    "pg": "8.11.3",
+    "strapi-plugin-menus": "^1.5.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "21ac02fd-426e-4ee0-bda1-150411f289a5"
+  }
+}

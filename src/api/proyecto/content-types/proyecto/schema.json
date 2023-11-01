@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyectos",
+  "info": {
+    "singularName": "proyecto",
+    "pluralName": "proyectos",
+    "displayName": "Proyecto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "proyectos"
+    },
+    "pilar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pilar.pilar",
+      "inversedBy": "proyectos"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre",
+      "required": true
+    },
+    "contenido": {
+      "type": "dynamiczone",
+      "components": [
+        "proyecto.contenido",
+        "proyecto.imagen-ancho-completo",
+        "proyecto.imagen-dos-columnas"
+      ]
+    }
+  }
+}

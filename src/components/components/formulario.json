@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_formularios",
+  "info": {
+    "displayName": "Formulario",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "formId": {
+      "type": "string",
+      "required": true,
+      "default": "b45ec825-dd54-4818-88ea-02d0a9e2072b"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_proyecto_imagen_ancho_completos",
+  "info": {
+    "displayName": "Imagen ancho completo",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "medio": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

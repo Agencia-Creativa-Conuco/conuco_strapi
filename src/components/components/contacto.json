@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_contactos",
+  "info": {
+    "displayName": "Contacto",
+    "icon": "headphone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titular": {
+      "type": "string",
+      "required": true,
+      "default": "Tierra fertil para todos tus <span>proyectos</span>"
+    },
+    "copy": {
+      "type": "text",
+      "required": true,
+      "default": "Nos dedicamos a conectar la identidad de las marcas con las personas,  generarando cambios por medio de sus productos que contribuyen mejorar la vida de sus usuarios."
+    },
+    "formulario": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.formulario",
+      "required": true
+    }
+  }
+}
