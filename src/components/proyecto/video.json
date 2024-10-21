@@ -9,7 +9,7 @@
   "attributes": {
     "url": {
       "type": "string",
-      "required": false
+      "required": true
     }
   }
 }
