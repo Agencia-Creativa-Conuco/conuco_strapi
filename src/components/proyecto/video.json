@@ -9,7 +9,15 @@
   "attributes": {
     "url": {
       "type": "string",
-      "required": true
+      "required": false
+    },
+    "medio": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

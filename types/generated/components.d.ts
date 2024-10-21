@@ -8,7 +8,8 @@ export interface ProyectoVideo extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    medio: Schema.Attribute.Media<'files' | 'videos'>;
   };
 }
 
