@@ -622,7 +622,6 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
         'proyecto.contenido',
         'proyecto.imagen-ancho-completo',
         'proyecto.imagen-dos-columnas',
-        'proyecto.video',
         'proyecto.local-video',
       ]
     >;
