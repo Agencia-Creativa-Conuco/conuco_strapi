@@ -39,8 +39,24 @@
       "components": [
         "proyecto.contenido",
         "proyecto.imagen-ancho-completo",
-        "proyecto.imagen-dos-columnas"
+        "proyecto.imagen-dos-columnas",
+        "proyecto.video"
       ]
+    },
+    "medio": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "caption": {
+      "type": "text",
+      "required": true
     }
   }
 }
