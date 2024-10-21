@@ -9,7 +9,18 @@ export interface ProyectoVideo extends Struct.ComponentSchema {
   };
   attributes: {
     url: Schema.Attribute.String;
-    medio: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
+export interface ProyectoLocalVideo extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_local_videos';
+  info: {
+    displayName: 'Local Video';
+    icon: 'archive';
+  };
+  attributes: {
+    medio: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -85,6 +96,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'proyecto.video': ProyectoVideo;
+      'proyecto.local-video': ProyectoLocalVideo;
       'proyecto.imagen-dos-columnas': ProyectoImagenDosColumnas;
       'proyecto.imagen-ancho-completo': ProyectoImagenAnchoCompleto;
       'proyecto.contenido': ProyectoContenido;

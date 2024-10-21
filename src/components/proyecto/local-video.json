@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_proyecto_local_videos",
+  "info": {
+    "displayName": "Local Video",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "medio": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

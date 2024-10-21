@@ -10,14 +10,6 @@
     "url": {
       "type": "string",
       "required": false
-    },
-    "medio": {
-      "allowedTypes": [
-        "files",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
