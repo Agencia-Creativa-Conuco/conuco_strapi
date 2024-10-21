@@ -2,14 +2,24 @@
   "collectionName": "components_proyecto_local_videos",
   "info": {
     "displayName": "Local Video",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "medio": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "files",
         "videos"
+      ]
+    },
+    "cover": {
+      "allowedTypes": [
+        "images",
+        "files"
       ],
       "type": "media",
       "multiple": false,

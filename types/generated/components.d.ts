@@ -17,9 +17,12 @@ export interface ProyectoLocalVideo extends Struct.ComponentSchema {
   info: {
     displayName: 'Local Video';
     icon: 'archive';
+    description: '';
   };
   attributes: {
     medio: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
+    cover: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
   };
 }
