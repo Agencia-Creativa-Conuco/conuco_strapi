@@ -501,6 +501,7 @@ export interface ApiClienteCliente extends Struct.CollectionTypeSchema {
     singularName: 'cliente';
     pluralName: 'clientes';
     displayName: 'Cliente';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -509,7 +510,7 @@ export interface ApiClienteCliente extends Struct.CollectionTypeSchema {
     nombre: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    logo: Schema.Attribute.Media<'images'>;
     url: Schema.Attribute.String;
     proyectos: Schema.Attribute.Relation<'oneToMany', 'api::proyecto.proyecto'>;
     createdAt: Schema.Attribute.DateTime;
