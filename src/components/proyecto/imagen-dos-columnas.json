@@ -24,6 +24,18 @@
         "images",
         "videos"
       ]
+    },
+    "aspectWidth": {
+      "type": "integer",
+      "required": false,
+      "min": 1,
+      "default": 1
+    },
+    "aspectHeight": {
+      "type": "integer",
+      "min": 1,
+      "default": 1,
+      "required": false
     }
   }
 }

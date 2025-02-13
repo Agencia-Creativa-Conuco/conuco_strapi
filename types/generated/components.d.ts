@@ -64,6 +64,22 @@ export interface ProyectoImagenDosColumnas extends Struct.ComponentSchema {
     icon: 'landscape';
   };
   attributes: {
+    aspectHeight: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<1>;
+    aspectWidth: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<1>;
     medio1: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required;
     medio2: Schema.Attribute.Media<'images' | 'videos'> &
