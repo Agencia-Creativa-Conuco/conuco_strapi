@@ -1,41 +1,47 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface ProyectoVideo extends Struct.ComponentSchema {
-  collectionName: 'components_proyecto_videos';
+export interface ComponentsContacto extends Struct.ComponentSchema {
+  collectionName: 'components_components_contactos';
   info: {
-    displayName: 'Video';
-    icon: 'play';
     description: '';
+    displayName: 'Contacto';
+    icon: 'headphone';
   };
   attributes: {
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    copy: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Nos dedicamos a conectar la identidad de las marcas con las personas,  generarando cambios por medio de sus productos que contribuyen mejorar la vida de sus usuarios.'>;
+    formulario: Schema.Attribute.Component<'components.formulario', false> &
+      Schema.Attribute.Required;
+    titular: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Tierra fertil para todos tus <span>proyectos</span>'>;
   };
 }
 
-export interface ProyectoLocalVideo extends Struct.ComponentSchema {
-  collectionName: 'components_proyecto_local_videos';
+export interface ComponentsFormulario extends Struct.ComponentSchema {
+  collectionName: 'components_components_formularios';
   info: {
-    displayName: 'Local Video';
-    icon: 'archive';
     description: '';
+    displayName: 'Formulario';
+    icon: 'layer';
   };
   attributes: {
-    medio: Schema.Attribute.Media<'files' | 'videos'> &
-      Schema.Attribute.Required;
-    cover: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
+    formId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'b45ec825-dd54-4818-88ea-02d0a9e2072b'>;
   };
 }
 
-export interface ProyectoImagenDosColumnas extends Struct.ComponentSchema {
-  collectionName: 'components_proyecto_imagen_dos_columnas';
+export interface ProyectoContenido extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_contenidos';
   info: {
-    displayName: 'Imagen dos columnas';
-    icon: 'landscape';
+    description: '';
+    displayName: 'Contenido';
+    icon: 'file';
   };
   attributes: {
-    medio1: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    medio2: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    texto: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -50,61 +56,58 @@ export interface ProyectoImagenAnchoCompleto extends Struct.ComponentSchema {
   };
 }
 
-export interface ProyectoContenido extends Struct.ComponentSchema {
-  collectionName: 'components_proyecto_contenidos';
+export interface ProyectoImagenDosColumnas extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_imagen_dos_columnas';
   info: {
-    displayName: 'Contenido';
-    icon: 'file';
     description: '';
+    displayName: 'Imagen dos columnas';
+    icon: 'landscape';
   };
   attributes: {
-    texto: Schema.Attribute.Blocks & Schema.Attribute.Required;
-  };
-}
-
-export interface ComponentsFormulario extends Struct.ComponentSchema {
-  collectionName: 'components_components_formularios';
-  info: {
-    displayName: 'Formulario';
-    icon: 'layer';
-    description: '';
-  };
-  attributes: {
-    formId: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'b45ec825-dd54-4818-88ea-02d0a9e2072b'>;
-  };
-}
-
-export interface ComponentsContacto extends Struct.ComponentSchema {
-  collectionName: 'components_components_contactos';
-  info: {
-    displayName: 'Contacto';
-    icon: 'headphone';
-    description: '';
-  };
-  attributes: {
-    titular: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Tierra fertil para todos tus <span>proyectos</span>'>;
-    copy: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Nos dedicamos a conectar la identidad de las marcas con las personas,  generarando cambios por medio de sus productos que contribuyen mejorar la vida de sus usuarios.'>;
-    formulario: Schema.Attribute.Component<'components.formulario', false> &
+    medio1: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required;
+    medio2: Schema.Attribute.Media<'images' | 'videos'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ProyectoLocalVideo extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_local_videos';
+  info: {
+    description: '';
+    displayName: 'Local Video';
+    icon: 'archive';
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    medio: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ProyectoVideo extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_videos';
+  info: {
+    description: '';
+    displayName: 'Video';
+    icon: 'play';
+  };
+  attributes: {
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'proyecto.video': ProyectoVideo;
-      'proyecto.local-video': ProyectoLocalVideo;
-      'proyecto.imagen-dos-columnas': ProyectoImagenDosColumnas;
-      'proyecto.imagen-ancho-completo': ProyectoImagenAnchoCompleto;
-      'proyecto.contenido': ProyectoContenido;
-      'components.formulario': ComponentsFormulario;
       'components.contacto': ComponentsContacto;
+      'components.formulario': ComponentsFormulario;
+      'proyecto.contenido': ProyectoContenido;
+      'proyecto.imagen-ancho-completo': ProyectoImagenAnchoCompleto;
+      'proyecto.imagen-dos-columnas': ProyectoImagenDosColumnas;
+      'proyecto.local-video': ProyectoLocalVideo;
+      'proyecto.video': ProyectoVideo;
     }
   }
 }

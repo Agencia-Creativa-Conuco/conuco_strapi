@@ -2,25 +2,28 @@
   "collectionName": "components_proyecto_imagen_dos_columnas",
   "info": {
     "displayName": "Imagen dos columnas",
-    "icon": "landscape"
+    "icon": "landscape",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "medio1": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     },
     "medio2": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     }
   }
 }
