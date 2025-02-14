@@ -48,11 +48,27 @@ export interface ProyectoContenido extends Struct.ComponentSchema {
 export interface ProyectoImagenAnchoCompleto extends Struct.ComponentSchema {
   collectionName: 'components_proyecto_imagen_ancho_completos';
   info: {
+    description: '';
     displayName: 'Imagen ancho completo';
     icon: 'picture';
   };
   attributes: {
-    medio: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    aspectHeight: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    aspectWidth: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    medio: Schema.Attribute.Media<'images' | 'videos'> &
+      Schema.Attribute.Required;
   };
 }
 

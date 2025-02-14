@@ -2,17 +2,27 @@
   "collectionName": "components_proyecto_imagen_ancho_completos",
   "info": {
     "displayName": "Imagen ancho completo",
-    "icon": "picture"
+    "icon": "picture",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "medio": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "aspectWidth": {
+      "min": 1,
+      "type": "integer"
+    },
+    "aspectHeight": {
+      "type": "integer",
+      "min": 1
     }
   }
 }

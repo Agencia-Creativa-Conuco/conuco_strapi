@@ -5,6 +5,7 @@
 import ckeditor from "@ckeditor/strapi-plugin-ckeditor/strapi-admin";
 import graphql from "@strapi/plugin-graphql/strapi-admin";
 import sentry from "@strapi/plugin-sentry/strapi-admin";
+import strapiCloud from "@strapi/plugin-cloud/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
@@ -13,6 +14,7 @@ renderAdmin(document.getElementById("strapi"), {
     ckeditor: ckeditor,
     graphql: graphql,
     sentry: sentry,
+    "strapi-cloud": strapiCloud,
     "users-permissions": usersPermissions,
   },
 });
