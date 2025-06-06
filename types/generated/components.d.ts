@@ -118,6 +118,32 @@ export interface ProyectoLocalVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface ProyectoMedios extends Struct.ComponentSchema {
+  collectionName: 'components_proyecto_medios';
+  info: {
+    displayName: 'Medios';
+    icon: 'picture';
+  };
+  attributes: {
+    aspectHeight: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    aspectWidth: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    medio: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ProyectoVideo extends Struct.ComponentSchema {
   collectionName: 'components_proyecto_videos';
   info: {
@@ -139,6 +165,7 @@ declare module '@strapi/strapi' {
       'proyecto.imagen-ancho-completo': ProyectoImagenAnchoCompleto;
       'proyecto.imagen-dos-columnas': ProyectoImagenDosColumnas;
       'proyecto.local-video': ProyectoLocalVideo;
+      'proyecto.medios': ProyectoMedios;
       'proyecto.video': ProyectoVideo;
     }
   }

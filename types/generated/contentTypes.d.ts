@@ -494,6 +494,7 @@ export interface ApiProyectoProyecto extends Struct.CollectionTypeSchema {
         'proyecto.imagen-ancho-completo',
         'proyecto.imagen-dos-columnas',
         'proyecto.local-video',
+        'proyecto.medios',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

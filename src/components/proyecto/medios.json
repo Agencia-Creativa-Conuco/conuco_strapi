@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_proyecto_medios",
+  "info": {
+    "displayName": "Medios",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "medio": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "aspectWidth": {
+      "type": "integer",
+      "min": 1
+    },
+    "aspectHeight": {
+      "type": "integer",
+      "min": 1
+    }
+  }
+}

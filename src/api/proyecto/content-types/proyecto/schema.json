@@ -40,7 +40,8 @@
         "proyecto.contenido",
         "proyecto.imagen-ancho-completo",
         "proyecto.imagen-dos-columnas",
-        "proyecto.local-video"
+        "proyecto.local-video",
+        "proyecto.medios"
       ]
     },
     "medio": {
