@@ -121,6 +121,7 @@ export interface ProyectoLocalVideo extends Struct.ComponentSchema {
 export interface ProyectoMedios extends Struct.ComponentSchema {
   collectionName: 'components_proyecto_medios';
   info: {
+    description: '';
     displayName: 'Medios';
     icon: 'picture';
   };
@@ -139,7 +140,7 @@ export interface ProyectoMedios extends Struct.ComponentSchema {
         },
         number
       >;
-    medio: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
+    medios: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
       Schema.Attribute.Required;
   };
 }

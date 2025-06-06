@@ -2,19 +2,20 @@
   "collectionName": "components_proyecto_medios",
   "info": {
     "displayName": "Medios",
-    "icon": "picture"
+    "icon": "picture",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "medio": {
+    "medios": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     },
     "aspectWidth": {
       "type": "integer",
